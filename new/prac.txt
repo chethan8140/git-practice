@@ -1,0 +1,69 @@
+# Git Options Cheat Sheet
+
+## Short Options (-) vs Long Options (--)
+
+1. **git log**
+
+* Short: `git log -n 5 -p`
+* Long: `git log --max-count=5 --patch`
+
+  * `-n` / `--max-count` : Show last n commits
+  * `-p` / `--patch` : Show diff for each commit
+
+2. **git status**
+
+* Short: `git status -s`
+* Long: `git status --short`
+
+  * `-s` / `--short` : Show status in compact format
+
+3. **git diff**
+
+* Short: `git diff -w`
+* Long: `git diff --ignore-all-space`
+
+  * `-w` / `--ignore-all-space` : Ignore whitespace changes
+
+4. **git checkout / switch**
+
+* Short: `git checkout -b feature-1`
+* Long: `git switch -c feature-1`
+
+  * `-b` / `-c` : Create a new branch and switch to it
+
+5. **git log visualization**
+
+* Long only example: `git log --oneline --graph --all`
+
+  * `--oneline` : Show commits in single line
+  * `--graph` : Show visual branch graph
+  * `--all` : Show commits from all branches
+
+6. **git add**
+
+* Long only: `git add --all`
+
+  * `--all` : Stage all changes (new, modified, deleted files)
+
+7. **git reset**
+
+* Short: `git reset --soft HEAD~1`
+* Long: `git reset --mixed HEAD~1`
+
+  * `--soft` : Undo commit, keep changes staged
+  * `--mixed` : Undo commit, keep changes unstaged
+
+8. **File separator**
+
+* `git checkout -- file.txt`
+
+  * `--` : Indicates that `file.txt` is a filename, not a branch or commit
+
+---
+
+✅ Key Takeaways:
+
+* **Short options (-)** : One letter, quick to type, e.g., `-n`, `-p`
+* **Long options (--)** : Descriptive, easier to read, e.g., `--max-count`, `--patch`
+* **Double dash `--`** can also be used to clarify filenames
+
